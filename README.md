@@ -68,21 +68,18 @@ npm install bootstrap
 1️⃣ Clone the Repository
 Open your terminal and run:
 
-sh
-Copy
+
 git clone https://github.com/yourusername/travel-planner-app.git
 cd travel-planner-app
 2️⃣ Install Dependencies
 Run:
 
-sh
-Copy
+
 npm install
 3️⃣ Set Up API Keys
 Create a .env file in the project root.
 Add the following API keys (Replace with your actual keys):
-sh
-Copy
+
 GEONAMES_USER=your_geonames_username
 WEATHERBIT_KEY=your_weatherbit_api_key
 PIXABAY_KEY=your_pixabay_api_key
@@ -90,20 +87,16 @@ PIXABAY_KEY=your_pixabay_api_key
 💻 Development Mode (Hot Reload)
 To start the app in development mode with live reloading, run:
 
-sh
-Copy
 npm run dev
 Then open:
 🔗 http://localhost:8081/
 
 🚀 Production Mode
 Build the project:
-sh
-Copy
+
 npm run build
 Start the Express server:
-sh
-Copy
+
 npm start
 Open the app at:
 🔗 http://localhost:8080/
@@ -115,8 +108,6 @@ npm test
 1️⃣ Error: Module not found: Can't resolve 'main.scss'
 ✅ Fix: Ensure main.scss is inside src/client/styles/ and imported correctly in index.js:
 
-js
-Copy
 import './styles/main.scss';
 2️⃣ Error: GenerateSW has been called multiple times
 ✅ Fix: Ensure GenerateSW is only included in webpack.prod.js and not in webpack.config.js.
@@ -124,8 +115,7 @@ import './styles/main.scss';
 3️⃣ Error: Module parse failed: Unexpected character '@' (Bootstrap)
 ✅ Fix: Ensure Webpack is configured to handle CSS files by adding this rule in webpack.config.js:
 
-js
-Copy
+
 module: {
     rules: [
         { test: /\.css$/, use: ['style-loader', 'css-loader'] }
